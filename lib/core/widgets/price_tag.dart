@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
 class PriceTag extends StatelessWidget {
-  const PriceTag({super.key, required this.amount, this.currency = 'Rp'});
+  const PriceTag({super.key, required this.name, required this.amount, this.currency = 'Rp'});
 
-  final int amount; // final: a description cannot be edited
+  final String name;
+  final int amount; // final — a widget describes, it does not mutate
   final String currency;
 
   @override
-  Widget build(BuildContext context) => Text('$currency $amount');
+  Widget build(BuildContext context) {
+    return Text('$name: $currency ${amount.toString()}');
+  }
 }

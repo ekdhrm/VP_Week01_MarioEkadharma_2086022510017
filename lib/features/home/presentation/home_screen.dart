@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:warung_digital/core/widgets/price_tag.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -8,13 +8,16 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       // the Material page skeleton
       appBar: AppBar(title: const Text('Warung Digital')),
-      body: ListView(
-        children: const [
-          ListTile(title: Text('Nasi Goreng'), trailing: Text('Rp 15.000')),
-          ListTile(title: Text('Mie Ayam'), trailing: Text('Rp 13.000')),
-          ListTile(title: Text('Nasi Padang'), trailing: Text('Rp 18.000')),
-        ],
-      ),
+      body: const Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center, // ini saya dapat dari StackOverflow, biar kolomnya di tengah (https://stackoverflow.com/questions/67420771/completely-center-widget-in-flutter)
+            children: [
+              PriceTag(name: 'Nasi Goreng', amount: 12000),
+              PriceTag(name: 'Nasi Padang Telur Dadar', amount: 15000),
+              PriceTag(name: 'Nasi Kuning Cakalang', amount: 13000),
+            ],
+          ),
+        ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: const Icon(Icons.add),
