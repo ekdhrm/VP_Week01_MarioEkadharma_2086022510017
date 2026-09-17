@@ -1,6 +1,6 @@
 # warung_digital
 
-A new Flutter project.
+A new Flutter exercise for Visual Programming subject.
 
 ## Getting Started
 
