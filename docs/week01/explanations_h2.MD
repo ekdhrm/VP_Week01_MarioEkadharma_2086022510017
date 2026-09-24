@@ -1,0 +1,1 @@
+jika dilihat dari struktur program/kodenya, terlihat bahwa center (const Center) itu sendiri memodifikasi widget body sehingga dia terpisah dengan widget atau properti text.
